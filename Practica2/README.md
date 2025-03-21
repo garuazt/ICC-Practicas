@@ -1,8 +1,8 @@
 # Proyecto: Simulación de Reloj Digital en Java
 
 ## Integrantes
-- [Isaac Jovany García Franco No. 322330690]
-- [Ana Sofía García Rubio Asteinza No. 320555840]
+- Isaac Jovany García Franco No. 322330690
+- Ana Sofía García Rubio Asteinza No. 320555840
 
 ## Descripción del proyecto
 Este proyecto implementa una clase `Reloj` que simula el funcionamiento de un reloj digital de 24 horas, mostrando la hora en formato `hh:mm:ss` y actualizándola cada segundo.
