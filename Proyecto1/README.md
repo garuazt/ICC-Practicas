@@ -23,7 +23,6 @@ El método `main` permite probar distintas operaciones y visualizar el estado de
 
 ## Inconvenientes
 - No se presentaron inconvenientes significativos durante el desarrollo del proyecto.  
-*(O reemplazar por una breve explicación si hubo problemas específicos y cómo se resolvieron)*
 
 ## Instrucciones de ejecución
 
