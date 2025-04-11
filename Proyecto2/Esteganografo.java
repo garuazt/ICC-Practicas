@@ -117,17 +117,13 @@ public class Esteganografo{
     
             String resultado = est.descifraNulo(original, n);
             System.out.println("Mensaje oculto: " + resultado);
-        }
-    
-        if (opcion == 2) {
+        }else if (opcion == 2) {
             System.out.println("Ingresa el mensaje original con espacios al final:");
             String original = scanner.nextLine();
     
             String resultado = est.descifraNulo(original);
             System.out.println("Mensaje oculto: " + resultado);
-        }
-    
-        if (opcion == 3) {
+        }else if (opcion == 3) {
             System.out.println("Ingresa el mensaje:");
             String mensaje = scanner.nextLine();
     
@@ -137,11 +133,11 @@ public class Esteganografo{
             boolean contiene = est.contieneNombre(mensaje, nombre);
             System.out.println("¿El mensaje contiene el nombre oculto? " + (contiene ? "Sí" : "No"));
         }
-
-        //if (opcion == 4) {}
-
-        //if (opcion == 5) {}
-    
+        //else if (opcion == 4) {}else if (opcion == 5) {}
+        else {
+            System.out.println("Opción no válida. Por favor selecciona 1, 2, 3, 4 o 5.");
+        }
+        
     }
     
     }
