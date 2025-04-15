@@ -83,13 +83,50 @@ public class Esteganografo{
                             .replace("ó", "o")
                             .replace("ú", "u");
         return mensajeAux.contains(nombreAux);
-
     }
 
-    //public String descifraPalabrasMarcadas ( String m , String e ){}
+    public String descifraPalabrasMarcadas(String m, String e) {
 
-    //public String descifraLetrasMarcadas ( String m , String e ){}
+        String[] palabrasM = m.trim().split("\\s+");
+        String[] palabrasE = e.trim().split("\\s+");
+        String mensajeOculto = "";
 
+        for (int i = 0; i < palabrasM.length && i < palabrasE.length; i++) {
+
+            if (!palabrasM[i].equals(palabrasE[i])) {
+             mensajeOculto += palabrasM[i] + " ";}
+        } 
+            if (mensajeOculto.length() > 0) {
+            mensajeOculto = mensajeOculto.substring(0, mensajeOculto.length() - 1);
+            }
+
+        return mensajeOculto;
+    }
+
+    public String descifraLetrasMarcadas(String m, String e) {
+
+        String[] palabrasM = m.trim().split("\\s+");
+        String[] palabrasE = e.trim().split("\\s+");
+        String mensajeOculto = "";
+
+        for (int i = 0; i < palabrasM.length && i < palabrasE.length; i++) {
+        
+            String palabraM = palabrasM[i];
+            String palabraE = palabrasE[i];
+            int minLength = Math.min(palabraM.length(), palabraE.length());
+
+            for (int j = 0; j < minLength; j++) {
+                if (palabraM.charAt(j) != palabraE.charAt(j)) {
+                mensajeOculto += palabraM.charAt(j); }
+            } if (palabraM.length() > palabraE.length()) {
+                mensajeOculto += palabraM.substring(minLength);
+                }
+        }
+
+        return mensajeOculto;
+    }
+
+   
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Esteganografo est = new Esteganografo();
@@ -133,13 +170,33 @@ public class Esteganografo{
             boolean contiene = est.contieneNombre(mensaje, nombre);
             System.out.println("¿El mensaje contiene el nombre oculto? " + (contiene ? "Sí" : "No"));
         }
-        //else if (opcion == 4) {}else if (opcion == 5) {}
+        else if (opcion == 4) {
+
+            System.out.println("Introduce el mensaje M:");
+            String m = scanner.nextLine();
+
+            System.out.println("Introduce el mensaje E:");
+            String e = scanner.nextLine();
+
+            String oculto = est.descifraPalabrasMarcadas(m, e);
+            System.out.println("Mensaje oculto: \"" + oculto + "\"");
+       }
+        else if (opcion == 5) {
+            System.out.println("Introduce el mensaje M:");
+            String m = scanner.nextLine();
+
+            System.out.println("Introduce el mensaje E:");
+            String e = scanner.nextLine();
+
+            String oculto = est.descifraLetrasMarcadas(m, e);
+            System.out.println("Mensaje oculto: \"" + oculto + "\"");
+        }
+       
         else {
-            System.out.println("Opción no válida. Por favor selecciona 1, 2, 3, 4 o 5.");
+            System.out.println("Syntax error jaja");
         }
         
     }
-    
-    }
+}
 
 
