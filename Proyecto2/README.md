@@ -33,8 +33,8 @@ El método `main` ofrece un menú interactivo que permite al usuario elegir entr
 1. Descifrado nulo con valor `n` proporcionado
 2. Descifrado nulo con espacios al final
 3. Verificación de nombre oculto en un texto
-4. [En desarrollo] Descifrado por palabras marcadas
-5. [En desarrollo] Descifrado por letras marcadas
+4. Descifrado por palabras marcadas
+5. Descifrado por letras marcadas
 
 ## Funciones Pendientes
 
