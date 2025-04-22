@@ -49,6 +49,7 @@ public class ListaLigada {
         }
     }
 
+    @Override
     public String toString() {
         if (cabeza == null) return "Lista vacía";
         
