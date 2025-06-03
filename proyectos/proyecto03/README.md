@@ -3,7 +3,7 @@
 Pick-A-Perro es una versión por turnos del juego de cartas del mismo nombre, implementada en Java. El objetivo es formar una secuencia de cartas con diferencias mínimas en sus atributos visuales.
 
 ## INTEGRANTES:
-- Isaac Jovany García Franco ()
+- Isaac Jovany García Franco (322330690)
 - Ana Sofía García Rubio Asteinza (320555840)
 
 ## 🎮 Cómo jugar
